@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig2</title>
+    <style>
+        select option:first-child{
+            display: none;
+        }
+        .form-group{
+            display: block;
+            width: 250px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <script src="index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h1>Bestilling av kinobilletter</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="velgFilm">Velg film:</label></td>
+                    <select id="velgFilm" class="form-control">
+                        <option id="0">velg film</option>
+                        <option value="The expendables">The expendables</option>
+                        <option>Pretty little liars</option>
+                        <option>Harry Potter 3</option>
+                        <option>1914</option>
+                    </select>
+                    <div id="filmFeilmelding"></div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAntall">Antall: </label>
+                    <input type="text" class="form-control" id="inputAntall">
+                    <div id="feilmeldingAntall"></div>
+                </div>
+                <div class="form-group">
+                    <label for="inputForNavn">Fornavn:</label>
+                    <input type="text" class="form-control"  id="inputForNavn">
+                    <div id="feilmeldingFornavn"></div>
+
+                </div>
+                <div class="form-group">
+                    <label for="inputEtterNavn">Etternavn: </label>
+                    <input type="text" class="form-control" id="inputEtterNavn">
+                    <div id="feilmeldingEtternavn"></div>
+                </div>
+                <div class="form-group">
+                    <label for="inputTlfNr">Telefonnr: </label>
+                    <input type="text" class="form-control" id="inputTlfNr">
+                    <div id="feilmeldingTlf"></div>
+
+                </div>
+                <div class="form-group">
+                    <label for="inputEpost">Epost: </label>
+                    <input type="text" class="form-control" id="inputEpost">
+                    <div id="feilmeldingEpost"></div>
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="registrer()">Kjøp billett</button>
+        </div>
+        <div class="col-md-7">
+            <form>
+                <h2>Alle billetter:</h2>
+                <div id="div1">
+                    <table class="table table-striped">
+
+                    <tr>
+                        <th>Film</th><th>Antall</th><th>Fornavn</th><th>Etternavn</th><th>Telefonnr</th><th>Epost</th>
+                    </tr>
+                    </table>
+                </div>
+                <button class="btn btn-danger" onclick="slett()">Slett alle</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
